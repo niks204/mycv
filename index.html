@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikhil Didore - Resume</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
+      background-size: 400% 400%;
+      animation: gradientBG 20s ease infinite;
+      overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Floating bubbles */
+    .bubbles span {
+      position: absolute;
+      bottom: -150px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      animation: bubble 25s linear infinite;
+    }
+    .bubbles span:nth-child(1){ left: 10%; width: 80px; height: 80px; animation-duration: 20s; }
+    .bubbles span:nth-child(2){ left: 30%; width: 40px; height: 40px; animation-duration: 22s; animation-delay: 2s; }
+    .bubbles span:nth-child(3){ left: 50%; width: 100px; height: 100px; animation-duration: 30s; animation-delay: 4s; }
+    .bubbles span:nth-child(4){ left: 70%; width: 60px; height: 60px; animation-duration: 26s; animation-delay: 3s; }
+    .bubbles span:nth-child(5){ left: 90%; width: 20px; height: 20px; animation-duration: 18s; animation-delay: 1s; }
+
+    @keyframes bubble {
+      0% { transform: translateY(0) scale(1); opacity: 0; }
+      10% { opacity: 0.5; }
+      50% { opacity: 0.7; }
+      100% { transform: translateY(-1200px) scale(1.2); opacity: 0; }
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #ffeb3b;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #fff; }
+
+    header img.profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-top: 15px;
+      animation: zoomIn 2s ease;
+      box-shadow: 0 0 20px rgba(255,255,255,0.6);
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      background: rgba(255,255,255,0.15);
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    section.visible { opacity: 1; transform: translateY(0); }
+
+    h1, h2 { text-align: center; margin-bottom: 20px; }
+
+    ul { list-style: none; padding: 0; }
+    ul li {
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+    ul li:hover {
+      transform: scale(1.05);
+      background: rgba(0,0,0,0.4);
+    }
+
+    .contact-info { text-align: center; }
+  </style>
+</head>
+<body>
+
+  <!-- Floating bubbles background -->
+  <div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation & Home -->
+  <header>
+    <h1>Nikhil Didore</h1>
+    <p>Software Developer</p>
+    <img src="WhatsApp Image 2025-09-02 at 9.25.29 PM.jpeg" alt="Nikhil Didore" class="profile-pic">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate Software Developer with expertise in web technologies like
+      HTML, CSS, JavaScript, React.js, Core & Advanced Java, and databases.
+      I enjoy building creative and functional applications that solve real-world problems.
+    </p>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>Bachelor of Computer Science (2021–2025)</strong> – 79.14%</li>
+      <li><strong>12th (2021)</strong> – 80.00%</li>
+      <li><strong>10th (2019)</strong> – 64.00%</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Core Java</li>
+      <li>JavaScript</li>
+      <li>jQuery</li>
+      <li>Bootstrap</li>
+      <li>Advanced Java</li>
+      <li>MySQL</li>
+      <li>Database</li>
+      <li>React.js</li>
+    </ul>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul>
+      <li>Upskill IT Training</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-info">
+      <p>Email: didorenik70@gmail.com</p>
+      <p>Phone: 8208657971</p>
+      <p>Location: Maharashtra, India</p>
+    </div>
+  </section>
+
+  <script>
+    // Reveal animation on scroll
+    const sections = document.querySelectorAll('section');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const boxTop = section.getBoundingClientRect().top;
+        if(boxTop < triggerBottom){
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+</body>
+</html>
